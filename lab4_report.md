@@ -36,7 +36,8 @@ All four environments were deployed and verified to return identical k-NN result
 * Warm Lambda executions dominate the total latency with the handler duration, network RTT is minor.
 * Cold start fraction in the first 30 requests: ~30–40%.
 
-**Figures:** `results/figures/latency-decomposition.*`
+**Figures:** `results/figures/latency-decomposition.png`
+<img width="1428" height="827" alt="latency-decomposition" src="https://github.com/user-attachments/assets/d38a3c0d-a0a9-4b36-b22f-faae5d3cd5e8" />
 
 ---
 
@@ -81,8 +82,6 @@ All four environments were deployed and verified to return identical k-NN result
 * Lambda exhibits a **bimodal latency distribution**: cold start cluster (~600 ms) vs. warm cluster (~180–200 ms).
 * Lambda p99 exceeds 500 ms SLO due to cold starts during burst.
 * Fargate/EC2 handle high concurrency more predictably but have higher average latency at peak c=50.
-
-**Figures:** `results/figures/scenario-c-histogram.*`
 
 ---
 
